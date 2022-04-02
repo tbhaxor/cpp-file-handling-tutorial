@@ -13,6 +13,7 @@ int main(int argc, char **argv) {
   std::ofstream *ofile = new std::ofstream();
   std::ifstream *ifile = new std::ifstream();
 
+  // open file with truncate mode and binary mode
   ofile->open("student.dat", std::ios::binary | std::ios::trunc);
 
   // setup student object
@@ -20,6 +21,7 @@ int main(int argc, char **argv) {
   student->setAge((unsigned short)std::stoul(argv[2]));
   student->setName(argv[1]);
 
+  // write binary content into student
   ofile->write(reinterpret_cast<char *>(student), sizeof(*student));
   ofile->close();
 
