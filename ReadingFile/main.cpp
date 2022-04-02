@@ -17,9 +17,10 @@ int main(int argc, char **argv) {
     std::string data;
 
     // read file until eof is hit
+    std::getline(*file, data);
     while (!file->eof()) {
-      std::getline(*file, data);
       std::cout << data << std::endl;
+      std::getline(*file, data);
     }
   } else {
     std::cerr << "Unable to open file \n";
