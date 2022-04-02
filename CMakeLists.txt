@@ -10,3 +10,4 @@ set(CMAKE_RUNTIME_OUTPUT_DIRECTORY ${CMAKE_BINARY_DIR}/bin)
 
 add_subdirectory(WritingFile)
 add_subdirectory(ReadingFile)
+add_subdirectory(AppendingFile)
