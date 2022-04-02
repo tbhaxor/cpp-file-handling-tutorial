@@ -1,10 +1,10 @@
-#include <iostream>
-#include <fstream>
 #include <cstring>
+#include <fstream>
+#include <iostream>
 
 int main(int argc, char **argv) {
   if (argc < 3) {
-    std::cerr << "usage: " << argv[0] << " <filename> <text1>\n";
+    std::cerr << "usage: " << argv[0] << " <filename> <text>\n";
     return 0x1;
   }
 
