@@ -641,6 +641,7 @@ FodyWeavers.xsd
 *.bin
 *.dat
 *.txt
+!CMakeLists.txt
 
 ### VisualStudio Patch ###
 # Additional files built by Visual Studio
