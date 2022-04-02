@@ -26,9 +26,12 @@ int main(int argc, char **argv) {
   ifile->open("student.dat", std::ios::binary);
   if (ifile->is_open()) {
     Student *s = new Student();
+
+    // safely read file from the
+    ifile->read(reinterpret_cast<char *>(s), sizeof(Student));
     while (!ifile->eof()) {
-      ifile->read(reinterpret_cast<char *>(s), sizeof(Student));
       std::cout << s->whoami() << std::endl;
+      ifile->read(reinterpret_cast<char *>(s), sizeof(Student));
     }
   } else {
     std::cerr << "Unable to open file\n";

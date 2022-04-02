@@ -2,7 +2,7 @@
 
 class Student {
 private:
-  std::string name;
+  char name[50];
   unsigned short age;
 
 public:
