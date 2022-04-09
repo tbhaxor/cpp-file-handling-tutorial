@@ -24,7 +24,7 @@ int main(void) {
     if (opt == "w" || opt == "W") {
       // clear flags and set put cursor at eof
       file->clear();
-      file->seekp(std::ios::end);
+      file->seekp(0, std::ios::end);
 
       std::string data;
       std::cout << "Enter string: ";
@@ -33,7 +33,7 @@ int main(void) {
     } else if (opt == "r" || opt == "R") {
       // clear flag and set get cursor at begining of file
       file->clear();
-      file->seekg(std::ios::beg);
+      file->seekg(0, std::ios::beg);
 
       std::string data;
 
