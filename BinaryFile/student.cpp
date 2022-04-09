@@ -3,12 +3,15 @@
 #include <sstream>
 #include <string>
 
-void Student::setAge(int age) { this->age = age; }
-void Student::setAge(short age) { this->age = age; }
-void Student::setAge(unsigned short age) { this->age = age; }
+Student::Student() {
+  this->name = "";
+  this->age = 0;
+}
 
-void Student::setName(std::string &name) { this->name = name; }
-void Student::setName(const char *name) { this->name = std::string(name); }
+Student::Student(const char *name, unsigned short age) {
+  this->name = std::string(name);
+  this->age = age;
+}
 
 std::string Student::whoami() const {
   std::stringstream s;

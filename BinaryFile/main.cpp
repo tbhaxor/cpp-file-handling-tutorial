@@ -17,9 +17,8 @@ int main(int argc, char **argv) {
   ofile->open("student.dat", std::ios::binary | std::ios::trunc);
 
   // setup student object
-  Student *student = new Student();
-  student->setAge((unsigned short)std::stoul(argv[2]));
-  student->setName(argv[1]);
+  Student *student =
+      new Student(argv[1], static_cast<unsigned short>(std::stoul(argv[2])));
 
   // write binary content into student
   ofile->write(reinterpret_cast<char *>(student), sizeof(*student));
